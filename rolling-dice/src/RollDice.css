@@ -4,12 +4,6 @@
     justify-content: center;
 }
 
-.Die {
-    font-size: 10em;
-    padding: 0.25em;
-    color: rgb(71, 171, 233);
-}
-
 .RollDice button {
     width: 15em;
     padding: 1.5em;

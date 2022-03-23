@@ -20,18 +20,11 @@ const RollDice = () => {
         }, 1000)
     }
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         console.log("the dice are in play")
-    //     }, 2000);
-    //     return () => clearTimeout(timer);
-    // }, []);
-
     return (
         <div className="RollDice">
             <div className="RollDice-dice-pair">
-                <Die number={dieRoll1} />
-                <Die number={dieRoll2} />
+                <Die number={dieRoll1} rolling={rolling} />
+                <Die number={dieRoll2} rolling={rolling} />
             </div>
             
             <button disabled={rolling} onClick={handleRoll} className="RollDice-btn">{(rolling === true) ? "Rolling..." : "Roll Dice"}</button>
