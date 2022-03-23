@@ -1,0 +1,4 @@
+.RollDice-dice-pair {
+    display: flex;
+    flex-direction: row;
+}
