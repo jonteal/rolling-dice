@@ -14,6 +14,10 @@ const RollDice = () => {
         const randomIdx2 = options[Math.floor(Math.random() * options.length)];
         setDieRoll1(randomIdx1);
         setDieRoll2(randomIdx2);
+        setIsRolling(true);
+        setTimeout(() => {
+            setIsRolling(false);
+        }, 1000)
     }
 
     // useEffect(() => {
@@ -30,7 +34,7 @@ const RollDice = () => {
                 <Die number={dieRoll2} />
             </div>
             
-            <button onClick={handleRoll} className="RollDice-btn">{(rolling === true) ? "Rolling Dice" : "Roll Dice"}</button>
+            <button disabled={rolling} onClick={handleRoll} className="RollDice-btn">{(rolling === true) ? "Rolling..." : "Roll Dice"}</button>
         </div>
     );
 }
