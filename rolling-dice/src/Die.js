@@ -6,7 +6,6 @@ const Die = (props) => {
     return(
         <div>
             <i className={`Die fas fa-dice-${props.number} ${props.rolling ? 'shaking' : ""}`}></i>
-
         </div>
     )
 }
